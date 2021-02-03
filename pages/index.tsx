@@ -6,6 +6,9 @@ import Date from "../components/date/date";
 import Layout, { siteTitle } from "../components/layout/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
+import { useContext } from "react";
+import LangContext from "@/context/LanguageContext";
+import { Texts } from "@/constants/string";
 
 export default function Home({
   allPostsData,
@@ -16,17 +19,15 @@ export default function Home({
     id: string;
   }[];
 }) {
+  const { currentLangData } = useContext(LangContext);
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>
-          Computing engineer passionate about entrepreneurship who is always
-          motivated with self-learning and connection with different cultures. I
-          am delighted about learning new technologies and contributing
-          solutions to real-life challenges
+        <p className={utilStyles.justifyText}>
+          {currentLangData.HOME.PROFILE_DESCRIPTION}
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

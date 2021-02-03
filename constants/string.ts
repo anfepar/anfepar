@@ -1,4 +1,4 @@
-interface Texts {
+export interface Texts {
   HOME: {
     PROFILE_DESCRIPTION: string;
   };
@@ -21,7 +21,7 @@ const STRINGS: Languages = {
     },
     HOME: {
       PROFILE_DESCRIPTION:
-        "Computing engineer passionate about entrepreneurship, who is always motivated with self-learning and knowledge exchange with others. I am delighted about learning new technologies and contributing solutions to real-life challenges",
+        "I’m a Software Engineer passionate about entrepreneurship, I like to solve problems using creativity and innovation, I’m always motivated to learn something every day and share knowledge in communities. I consider myself  a leader in training, a curious person with initiative, and a great dancer",
     },
   },
   SPA: {
@@ -31,7 +31,7 @@ const STRINGS: Languages = {
     },
     HOME: {
       PROFILE_DESCRIPTION:
-        "Ingeniero informático apasionado por el emprendimiento, siempre motivado por el autoaprendizaje y el intercambio de conocimientos con los demás. Me emociona aprender nuevas tecnologías y aportar soluciones a los desafíos de la vida real.",
+        "Soy un Ingeniero de Software apasionado por el emprendimiento, me gusta resolver problemas usando la creatividad y la innovación, siempre estoy motivado por aprender cada día algo nuevo y compartir conocimiento en comunidades. Me considero un líder en formación, una persona curiosa con iniciativa y un gran bailarín",
     },
   },
 };

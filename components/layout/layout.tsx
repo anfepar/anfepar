@@ -3,6 +3,7 @@ import utilStyles from "@/styles/utils.module.css";
 import Link from "next/link";
 import Head from "next/head";
 import LanguageButton from "@/components/languageButton/languageButton";
+import MediaButton from "@/components/mediaButtons/mediaButtons";
 const name = "Felipe Pardo";
 export const siteTitle = "Next.js Sample Website";
 
@@ -59,6 +60,7 @@ export default function Layout({
             </h2>
           </>
         )}
+        <MediaButton />
       </header>
       <main>{children}</main>
       {!home && (

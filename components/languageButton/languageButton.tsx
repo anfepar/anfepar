@@ -1,17 +1,15 @@
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
-import { useState } from "react";
+import { LANGUAGES } from "@/constants/languageTypes";
 import styles from "./languageButton.module.css";
+import LangContext from "@/context/LanguageContext";
+import { useContext } from "react";
 
-enum Languages {
-  ENG = "Eng",
-  SPA = "Spa",
-}
-
-const languages = [Languages.ENG, Languages.SPA];
+const languages = [LANGUAGES.ENGLISH, LANGUAGES.SPANISH];
 
 export default function LanguageButton() {
-  const [selectLanguage, setLanguage] = useState<Languages>(Languages.ENG);
+  const { switchLang, lang } = useContext(LangContext);
+
   return (
     <ButtonGroup
       className={styles.container}
@@ -21,8 +19,8 @@ export default function LanguageButton() {
       {languages.map((language) => (
         <Button
           key={language}
-          variant={selectLanguage === language ? "contained" : "outlined"}
-          onClick={() => setLanguage(language)}
+          variant={lang === language ? "contained" : "outlined"}
+          onClick={() => switchLang(language)}
         >
           {language}
         </Button>
