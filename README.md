@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-- 🌱 I’m currently learning entrepreneurship and web development on [Platzi](https://platzi.com/clases/taller-startups/)
+- 🌱 I’m currently learning entrepreneurship, english and web development on [Platzi](https://platzi.com/clases/taller-startups/)
 
 ### My projects 🤓
 ### Entrepreneurship 🚀
