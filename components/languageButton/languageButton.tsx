@@ -4,11 +4,22 @@ import { LANGUAGES } from "@/constants/languageTypes";
 import styles from "./languageButton.module.css";
 import LangContext from "@/context/LanguageContext";
 import { useContext } from "react";
+import { useRouter } from "next/router";
 
 const languages = [LANGUAGES.ENGLISH, LANGUAGES.SPANISH];
 
 export default function LanguageButton() {
   const { switchLang, lang } = useContext(LangContext);
+  const router = useRouter();
+
+  const handleSwitchLanguage = (language: LANGUAGES) => {
+    if (router.pathname !== "/") {
+      const currentPath = router.asPath;
+      const resultPath = currentPath.replace(lang, language);
+      switchLang(language);
+      router.push(resultPath);
+    }
+  };
 
   return (
     <ButtonGroup
@@ -20,7 +31,7 @@ export default function LanguageButton() {
         <Button
           key={language}
           variant={lang === language ? "contained" : "outlined"}
-          onClick={() => switchLang(language)}
+          onClick={() => handleSwitchLanguage(language)}
         >
           {language}
         </Button>

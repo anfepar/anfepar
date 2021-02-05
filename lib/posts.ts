@@ -46,32 +46,28 @@ const getPostMetaData = (filePath: string, fileName: string) => {
 };
 
 export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory);
-
-  // Returns an array that looks like this:
-  // [
-  //   {
-  //     params: {
-  //       id: 'ssg-ssr'
-  //     }
-  //   },
-  //   {
-  //     params: {
-  //       id: 'pre-rendering'
-  //     }
-  //   }
-  // ]
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ""),
-      },
+  let postIds: {
+    params: {
+      id: string[];
     };
+  }[] = [];
+  languages.forEach((language: string) => {
+    const fileNames = fs.readdirSync(`${postsDirectory}/${language}`);
+    const languagePostIds = fileNames.map((fileName) => {
+      return {
+        params: {
+          id: [fileName.replace(/\.md$/, ""), language],
+        },
+      };
+    });
+    postIds = [...postIds, ...languagePostIds];
   });
+  return postIds;
 }
 
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`);
+export async function getPostData(id: string, language: string) {
+  const languageDirectory = `${postsDirectory}/${language}`;
+  const fullPath = path.join(languageDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
   // Use gray-matter to parse the post metadata section

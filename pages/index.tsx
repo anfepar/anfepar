@@ -33,7 +33,7 @@ export default function Home({ allPostsData }: HomeProps) {
         <ul className={utilStyles.list}>
           {postsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
+              <Link href="/posts/[...id]" as={`/posts/${id}/${lang}`}>
                 <a>{title}</a>
               </Link>
               <br />
