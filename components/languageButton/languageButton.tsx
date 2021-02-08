@@ -16,9 +16,9 @@ export default function LanguageButton() {
     if (router.pathname !== "/") {
       const currentPath = router.asPath;
       const resultPath = currentPath.replace(lang, language);
-      switchLang(language);
       router.push(resultPath);
     }
+    switchLang(language);
   };
 
   return (

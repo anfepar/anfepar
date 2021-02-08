@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import remark from "remark";
 import html from "remark-html";
+import images from "remark-images";
 import { stringify } from "querystring";
 import { LANGUAGES } from "@/constants/languageTypes";
 
@@ -74,6 +75,7 @@ export async function getPostData(id: string, language: string) {
   const matterResult = matter(fileContents);
 
   const processedContent = await remark()
+    .use(images)
     .use(html)
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
