@@ -7,7 +7,7 @@ import MediaButton from "@/components/mediaButtons/mediaButtons";
 import { useContext } from "react";
 import LangContext from "@/context/LanguageContext";
 const name = "Felipe Pardo";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "anfepar";
 
 export default function Layout({
   children,
@@ -24,16 +24,9 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content="anfepar personal website"
         />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
         <LanguageButton />
