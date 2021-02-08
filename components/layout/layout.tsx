@@ -3,8 +3,11 @@ import utilStyles from "@/styles/utils.module.css";
 import Link from "next/link";
 import Head from "next/head";
 import LanguageButton from "@/components/languageButton/languageButton";
+import MediaButton from "@/components/mediaButtons/mediaButtons";
+import { useContext } from "react";
+import LangContext from "@/context/LanguageContext";
 const name = "Felipe Pardo";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "anfepar";
 
 export default function Layout({
   children,
@@ -13,22 +16,17 @@ export default function Layout({
   children: React.ReactNode;
   home?: boolean;
 }) {
+  const { currentLangData } = useContext(LangContext);
+
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content="anfepar personal website"
         />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
         <LanguageButton />
@@ -59,12 +57,13 @@ export default function Layout({
             </h2>
           </>
         )}
+        <MediaButton />
       </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>{currentLangData.POST.BACK_ARROW}</a>
           </Link>
         </div>
       )}
