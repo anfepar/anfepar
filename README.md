@@ -10,7 +10,7 @@
 - TripU  prototype https://travel-project.vercel.app/
 ### Blockchain ⛓️
 - BSIEM https://github.com/anfepar/BSIEM 
-- Basic Message Echange with Ethereum https://github.com/anfepar/MessageExchange
+- Basic Message Exchange with Ethereum https://github.com/anfepar/MessageExchange
 ### Education 📖
 - Starwars Planets Searcher https://github.com/anfepar/starwars-planets-search
 - Anfepar my personal blog in construction 🚧 https://github.com/anfepar/anfepar 
