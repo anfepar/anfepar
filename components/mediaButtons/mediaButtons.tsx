@@ -4,8 +4,16 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import styles from "./mediaButtons.module.css";
 
 const socialMediaList = [
-  { name: "linkedin", url: "https://www.linkedin.com/in/anfepar", icon: "/images/linkedin.png" },
-  { name: "github", url: "https://github.com/anfepar", icon: "/images/github.png" },
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/anfepar",
+    icon: "/images/linkedin.png",
+  },
+  {
+    name: "github",
+    url: "https://github.com/anfepar",
+    icon: "/images/github.png",
+  },
 ];
 
 export default function MediaButton() {
@@ -17,9 +25,9 @@ export default function MediaButton() {
     >
       {socialMediaList.map((media) => (
         <Button key={media.name} variant="contained">
-          <Link href={media.url}>
-            <img src={media.icon} />
-          </Link>
+          <a href={media.url} target="_blank">
+            <img className={styles.image} src={media.icon} />
+          </a>
         </Button>
       ))}
     </ButtonGroup>
