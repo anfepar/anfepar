@@ -22,11 +22,14 @@ export default function Layout({
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="anfepar personal website"
-        />
+        <meta name="description" content="anfepar personal website" />
         <meta name="og:title" content={siteTitle} />
+        <meta
+          property="og:image"
+          content="https://firebasestorage.googleapis.com/v0/b/blog-dd6cf.appspot.com/o/og-image.png?alt=media&token=56f8c265-276e-46e8-99ac-df54d27b1ac4"
+        />
+        <meta property="og:url" content="https://anfepar.com/" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
         <LanguageButton />
