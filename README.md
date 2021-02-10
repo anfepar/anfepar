@@ -13,7 +13,7 @@
 - Basic Message Exchange with Ethereum https://github.com/anfepar/MessageExchange
 ### Education 📖
 - Starwars Planets Searcher https://github.com/anfepar/starwars-planets-search
-- Anfepar my personal blog in construction 🚧 https://github.com/anfepar/anfepar 
+- Anfepar my personal blog https://github.com/anfepar/anfepar 
 - Minicomerce with Tpaga wallet https://github.com/anfepar/minicommerce-front
 - Mercado libre products searcher https://github.com/anfepar/MercadoLibreFrontTest
 - PlatziGram https://github.com/anfepar/PlatziGram
