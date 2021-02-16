@@ -26,7 +26,7 @@ export default function Layout({
         <meta name="og:title" content={siteTitle} />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/blog-dd6cf.appspot.com/o/og-image.png?alt=media&token=56f8c265-276e-46e8-99ac-df54d27b1ac4"
+          content="https://firebasestorage.googleapis.com/v0/b/blog-dd6cf.appspot.com/o/og-image.png?alt=media&token=37775fea-5098-42b8-9d15-383c1369d894"
         />
         <meta property="og:url" content="https://anfepar.com/" />
         <meta name="twitter:card" content="summary_large_image" />
