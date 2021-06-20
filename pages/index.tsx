@@ -4,7 +4,7 @@ import { GetStaticProps } from "next";
 
 import Date from "../components/date/date";
 import Layout, { siteTitle } from "../components/layout/layout";
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "../styles/utils.module.sass";
 import { getSortedPostsData } from "../lib/posts";
 import { useContext } from "react";
 import LangContext from "@/context/LanguageContext";

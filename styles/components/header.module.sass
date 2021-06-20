@@ -1,0 +1,70 @@
+@import '../vars'
+
+.Header
+  width: 100%
+  display: flex
+  justify-content: space-between
+  background-color: $main-blue
+  &_Menu
+    color: $light-blue
+    display: flex
+    align-items: center
+    &_Item
+      margin-right: 20px
+  &_Icon
+    fill: $light-blue
+    background-color: $main-blue
+    height: 30px
+    margin-right: 20px
+  &_Logo
+    height: 30px
+  &_Switch
+    position: relative
+    display: inline-block
+    width: 60px
+    height: 34px
+    margin-right: 20px
+    & input
+      opacity: 0
+      width: 0
+      height: 0
+  &_Slider
+    position: absolute
+    cursor: pointer
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: transparent
+    border: 1px solid $light-blue
+    -webkit-transition: .4s
+    transition: .4s
+    border-radius: 34px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    padding-right: 5px
+    &::before
+      position: absolute
+      border-radius: 50%
+      content: ""
+      height: 26px
+      width: 26px
+      left: 4px
+      bottom: 3px
+      background-color: $light-blue
+      -webkit-transition: .4s
+      transition: .4s
+
+input:checked + .Header_Slider
+  background-color: $light-blue
+
+input:focus + .Header_Slider
+  box-shadow: 0 0 1px $light-blue
+
+input:checked + .Header_Slider:before
+  -webkit-transform: translateX(26px)
+  -ms-transform: translateX(26px)
+  transform: translateX(26px)
+
+

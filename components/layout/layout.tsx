@@ -1,11 +1,13 @@
-import styles from "./layout.module.css";
-import utilStyles from "@/styles/utils.module.css";
+import utilStyles from "@/styles/utils.module.sass";
 import Link from "next/link";
 import Head from "next/head";
 import LanguageButton from "@/components/languageButton/languageButton";
 import MediaButton from "@/components/mediaButtons/mediaButtons";
+import Header from "@/components/header";
 import { useContext } from "react";
 import LangContext from "@/context/LanguageContext";
+import styles from "./layout.module.sass";
+
 const name = "Felipe Pardo";
 export const siteTitle = "anfepar";
 
@@ -19,7 +21,7 @@ export default function Layout({
   const { currentLangData } = useContext(LangContext);
 
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="anfepar personal website" />
@@ -31,6 +33,7 @@ export default function Layout({
         <meta property="og:url" content="https://anfepar.com/" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <Header />
       <header className={styles.header}>
         <LanguageButton />
         {home ? (
@@ -70,6 +73,6 @@ export default function Layout({
           </Link>
         </div>
       )}
-    </div>
+    </>
   );
 }

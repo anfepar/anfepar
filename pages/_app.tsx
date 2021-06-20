@@ -1,4 +1,4 @@
-import "../styles/global.css";
+import "../styles/global.sass";
 import { AppProps } from "next/app";
 import {
   createMuiTheme,
