@@ -6,7 +6,9 @@ import MediaButton from "@/components/mediaButtons/mediaButtons";
 import Header from "@/components/header";
 import { useContext } from "react";
 import LangContext from "@/context/LanguageContext";
+import ThemeContext from "@/context/ThemeContext";
 import styles from "./layout.module.sass";
+
 
 const name = "Felipe Pardo";
 export const siteTitle = "anfepar";
@@ -19,7 +21,7 @@ export default function Layout({
   home?: boolean;
 }) {
   const { currentLangData } = useContext(LangContext);
-
+  const { theme, switchTheme } = useContext(ThemeContext)
   return (
     <>
       <Head>
@@ -33,46 +35,7 @@ export default function Layout({
         <meta property="og:url" content="https://anfepar.com/" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Header />
-      <header className={styles.header}>
-        <LanguageButton />
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-        <MediaButton />
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>{currentLangData.POST.BACK_ARROW}</a>
-          </Link>
-        </div>
-      )}
+      <Header theme={theme} onThemeSwitch={switchTheme} />
     </>
   );
 }
