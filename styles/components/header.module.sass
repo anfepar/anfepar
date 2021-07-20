@@ -10,9 +10,13 @@
     align-items: center
   &__Item
     margin-right: 20px
+    &:hover
+      color: $light-blue
   &__Icon
     height: 30px
     margin-right: 20px
+    &:hover
+      opacity: .8
   &__Logo
     height: 30px
   &__Switch
@@ -62,6 +66,9 @@
       padding-left: 5px
       &::before
         background-color: $light-blue
+    &__Item
+      &:hover
+        color: $dark-blue
 
 input:checked + .Header__Slider:before
   -webkit-transform: translateX(26px)
