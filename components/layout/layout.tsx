@@ -3,7 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import LanguageButton from "@/components/languageButton/languageButton";
 import MediaButton from "@/components/mediaButtons/mediaButtons";
-import Header from "@/components/header";
+import Header from "@/components/header/header";
 import { useContext } from "react";
 import LangContext from "@/context/LanguageContext";
 import ThemeContext from "@/context/ThemeContext";
