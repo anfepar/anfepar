@@ -28,10 +28,10 @@ export default function Header({ theme, onThemeSwitch }: HeaderProps) {
         <a className={styles.Header__Item}>{cld?.HEADER?.ABOUT_ME}</a>
         <a className={styles.Header__Item}>{cld?.HEADER?.BLOG}</a>
         <a className={styles.Header__Item}>{cld?.HEADER?.PROJECTS}</a>
-        <a target="_blank" rel="noreferrer" href="https://github.com/anfepar">
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/anfepar">
           <img className={styles.Header__Icon} src={`/images/github-${theme}.png`} alt={cld?.HEADER?.GITHUB_ALT} />
         </a>
-        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/anfepar/">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/anfepar/">
           <img className={styles.Header__Icon} src={`/images/linkedin-${theme}.png`} alt={cld?.HEADER?.LINKEDIN_ALT} />
         </a>
         <label className={styles.Header__Switch}>
