@@ -2,12 +2,10 @@ import styles from "./layout.module.css";
 import utilStyles from "@/styles/utils.module.css";
 import Link from "next/link";
 import Head from "next/head";
-import LanguageButton from "@/components/languageButton/languageButton";
 import MediaButton from "@/components/mediaButtons/mediaButtons";
-import { useContext } from "react";
-import LangContext from "@/context/LanguageContext";
 const name = "Felipe Pardo";
 export const siteTitle = "anfepar";
+import STRINGS from '@/constants/string'
 
 export default function Layout({
   children,
@@ -16,7 +14,6 @@ export default function Layout({
   children: React.ReactNode;
   home?: boolean;
 }) {
-  const { currentLangData } = useContext(LangContext);
 
   return (
     <div className={styles.container}>
@@ -32,7 +29,6 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
-        <LanguageButton />
         {home ? (
           <>
             <img
@@ -66,7 +62,7 @@ export default function Layout({
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>{currentLangData.POST.BACK_ARROW}</a>
+            <a>{STRINGS.POST.BACK_ARROW}</a>
           </Link>
         </div>
       )}
