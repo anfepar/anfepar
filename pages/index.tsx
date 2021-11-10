@@ -1,23 +1,20 @@
-import Head from "next/head";
-import Link from "next/link";
-import { GetStaticProps } from "next";
+import Head from 'next/head'
+import Link from 'next/link'
+import { GetStaticProps } from 'next'
 
-import Date from "../components/date/date";
-import Layout, { siteTitle } from "../components/layout/layout";
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
-import { useContext } from "react";
-import LangContext from "@/context/LanguageContext";
-import { Texts } from "@/constants/string";
+import Date from '../components/date/date'
+import Layout, { siteTitle } from '../components/layout/layout'
+import utilStyles from '../styles/utils.module.css'
+import { getSortedPostsData } from '../lib/posts'
+import { useContext } from 'react'
+import STRINGS from '@/constants/string'
 
 interface HomeProps {
-  allPostsData: any;
+  allPostsData: any
 }
 
 export default function Home({ allPostsData }: HomeProps) {
-  const { lang, currentLangData } = useContext(LangContext);
-  const postsData: { id: string; date: string; title: string }[] =
-    allPostsData[lang];
+  const postsData: { id: string; date: string; title: string }[] = allPostsData
   return (
     <Layout home>
       <Head>
@@ -25,7 +22,7 @@ export default function Home({ allPostsData }: HomeProps) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p className={utilStyles.justifyText}>
-          {currentLangData.HOME.PROFILE_DESCRIPTION}
+          {STRINGS.HOME.PROFILE_DESCRIPTION}
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -33,7 +30,7 @@ export default function Home({ allPostsData }: HomeProps) {
         <ul className={utilStyles.list}>
           {postsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href="/posts/[...id]" as={`/posts/${id}/${lang}`}>
+              <Link href="/posts/[id]" as={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
@@ -45,14 +42,14 @@ export default function Home({ allPostsData }: HomeProps) {
         </ul>
       </section>
     </Layout>
-  );
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData()
   return {
     props: {
       allPostsData,
     },
-  };
-};
+  }
+}

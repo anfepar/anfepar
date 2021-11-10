@@ -6,7 +6,6 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 import { grey } from "@material-ui/core/colors";
-import { LangProvider } from "@/components/LanguageProvider";
 
 const theme = createMuiTheme({
   palette: {
@@ -21,9 +20,7 @@ const theme = createMuiTheme({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <LangProvider>
         <Component {...pageProps} />
-      </LangProvider>
     </ThemeProvider>
   );
 }
