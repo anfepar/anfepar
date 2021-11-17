@@ -1,0 +1,27 @@
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.Header_Logo{
+  cursor: pointer;
+}
+
+.Header_Menu{
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  gap: 0.5rem
+}
+
+.Header_Button{
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.Header_Button:hover{
+  opacity: 0.7;
+}
