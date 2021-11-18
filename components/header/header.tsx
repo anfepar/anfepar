@@ -29,7 +29,7 @@ export const Header = () => {
         {socialMediaList.map((media) => (
           <li key={media.name}>
             <button className={styles.Header_Button}>
-              <a href={media.url} target="_blank">
+              <a href={media.url} target="_blank" rel="noreferrer">
                 <Image src={media.icon} width="35" height="35" alt={`logo de ${media.name}`} />
               </a>
             </button>
