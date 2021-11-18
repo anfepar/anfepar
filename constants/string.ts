@@ -9,6 +9,9 @@ export interface Texts {
   POST: {
     BACK_ARROW: string
   }
+  HEADER: {
+    LOGO_ALT: string,
+  }
 }
 
 const STRINGS: Texts = {
@@ -21,6 +24,9 @@ const STRINGS: Texts = {
       'Soy un Ingeniero de Software apasionado por el emprendimiento, me gusta resolver problemas usando la creatividad y la innovación, siempre estoy motivado por aprender cada día algo nuevo y compartir conocimiento en comunidades. Me considero un líder en formación, una persona curiosa con iniciativa y un gran bailarín',
   },
   POST: { BACK_ARROW: '← Volver al inico' },
-};
+  HEADER: {
+    LOGO_ALT: 'Logo de anfepar',
+  },
+}
 
 export default STRINGS
