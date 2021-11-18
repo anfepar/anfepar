@@ -1,22 +1,21 @@
-import styles from "./layout.module.css";
-import utilStyles from "@/styles/utils.module.css";
-import Link from "next/link";
-import Head from "next/head";
-import MediaButton from "@/components/mediaButtons/mediaButtons";
-const name = "Felipe Pardo";
-export const siteTitle = "anfepar";
+import styles from './layout.module.css'
+import utilStyles from '@/styles/utils.module.css'
+import Link from 'next/link'
+import Head from 'next/head'
+const name = 'Felipe Pardo'
+export const siteTitle = 'anfepar'
 import STRINGS from '@/constants/string'
+import { Header } from '../header/header'
 
 export default function Layout({
   children,
   home,
 }: {
-  children: React.ReactNode;
-  home?: boolean;
+  children: React.ReactNode
+  home?: boolean
 }) {
-
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="anfepar personal website" />
@@ -28,44 +27,29 @@ export default function Layout({
         <meta property="og:url" content="https://anfepar.com/" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-        <MediaButton />
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>{STRINGS.POST.BACK_ARROW}</a>
-          </Link>
+      <Header />
+      <div className={styles.container}>
+        <div className={styles.info}>
+          {home ? (
+            <>
+              <img
+                src="/images/profile.jpg"
+                className={`${styles.infoProfileImage} ${utilStyles.borderCircle}`}
+                alt={name}
+              />
+              <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            </>
+          ) : null}
         </div>
-      )}
-    </div>
-  );
+        <main>{children}</main>
+        {!home && (
+          <div className={styles.backToHome}>
+            <Link href="/">
+              <a>{STRINGS.POST.BACK_ARROW}</a>
+            </Link>
+          </div>
+        )}
+      </div>
+    </>
+  )
 }
