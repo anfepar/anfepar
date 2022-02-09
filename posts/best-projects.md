@@ -80,8 +80,6 @@ Y su stack tecnológico era:
 1. Frontend en vue.js
 2. Backend en django 
 
-Actualmente esta disponible en [https://kookybees.com](https://kookybees.com/)
-
 ## 1. BSIEM IoT
 
 ![BSEIM IoT](https://firebasestorage.googleapis.com/v0/b/blog-dd6cf.appspot.com/o/bsiem.jpg?alt=media&token=ff528ef5-f1ea-447f-88e8-ce30164d0714)
