@@ -3,7 +3,7 @@
 
 ### Hi there 👋
 
-I’m a frontend developer at Platzi 💚
+I’m a frontend developer 💚
 ### My projects 🤓
 ### Blockchain ⛓️
 - BSIEM https://github.com/anfepar/BSIEM 
