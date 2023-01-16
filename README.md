@@ -14,6 +14,7 @@ I’m a frontend developer 💚
 - Mercado libre products searcher https://github.com/anfepar/MercadoLibreFrontTest
 - PlatziGram https://github.com/anfepar/PlatziGram
 - Django api rest https://github.com/anfepar/django-api-rest
+- My Platzi profile https://platzi.com/p/anfepar/
 ### My Courses as teacher 💚
 I have a course at [Platzi](https://platzi.com/cursos/smart-contracts/) about smart contracts
 - Course repository https://github.com/anfepar/SmartContractsPlatzi
