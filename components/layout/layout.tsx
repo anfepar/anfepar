@@ -1,19 +1,13 @@
-import styles from './layout.module.css'
-import utilStyles from '@/styles/utils.module.css'
-import Link from 'next/link'
-import Head from 'next/head'
-import STRINGS from '@/constants/string'
-import { Header } from '@/components/Header'
+import styles from './layout.module.css';
+import Head from 'next/head';
+import { Header } from '@/components/Header';
 
-export const siteTitle = 'anfepar'
-const name = 'Felipe Pardo'
+export const siteTitle = 'anfepar';
 
 export const Layout = ({
   children,
-  home,
 }: {
   children: React.ReactNode
-  home?: boolean
 }) => {
   return (
     <>
@@ -29,28 +23,7 @@ export const Layout = ({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
-      <div className={styles.container}>
-        <div className={styles.info}>
-          {home ? (
-            <>
-              <img
-                src="/images/profile.jpg"
-                className={`${styles.infoProfileImage} ${utilStyles.borderCircle}`}
-                alt={name}
-              />
-              <h1 className={utilStyles.heading2Xl}>{name}</h1>
-            </>
-          ) : null}
-        </div>
-        <main>{children}</main>
-        {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">
-              {STRINGS.POST.BACK_ARROW}
-            </Link>
-          </div>
-        )}
-      </div>
+      <main className={styles.container}>{children}</main>
     </>
-  )
-}
+  );
+};

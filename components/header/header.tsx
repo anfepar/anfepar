@@ -1,8 +1,8 @@
-import STRINGS from '@/constants/string'
-import Image from 'next/image'
-import Link from 'next/link'
-import logo from '../../public/images/logo.png'
-import styles from './header.module.css'
+import STRINGS from '@/constants/string';
+import Image from 'next/image';
+import Link from 'next/link';
+import logo from '../../public/images/logo.png';
+import styles from './header.module.css';
 
 const socialMediaList = [
   {
@@ -15,7 +15,7 @@ const socialMediaList = [
     url: 'https://www.linkedin.com/in/anfepar',
     icon: '/images/linkedin.png',
   },
-]
+];
 
 export const Header = () => {
   return (
@@ -35,5 +35,5 @@ export const Header = () => {
         ))}
       </ul>
     </header>
-  )
-}
+  );
+};
