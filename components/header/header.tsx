@@ -20,10 +20,8 @@ const socialMediaList = [
 export const Header = () => {
   return (
     <header className={styles.Header}>
-      <Link href="/">
-        <a className={styles.Header_Logo}>
-          <Image src={logo} alt={STRINGS.HEADER.LOGO_ALT} placeholder="blur" />
-        </a>
+      <Link href="/" className={styles.Header_Logo}>
+        <Image src={logo} alt={STRINGS.HEADER.LOGO_ALT} placeholder="blur" />
       </Link>
       <ul className={styles.Header_Menu}>
         {socialMediaList.map((media) => (

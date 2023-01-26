@@ -45,7 +45,7 @@ export default function Layout({
         {!home && (
           <div className={styles.backToHome}>
             <Link href="/">
-              <a>{STRINGS.POST.BACK_ARROW}</a>
+              {STRINGS.POST.BACK_ARROW}
             </Link>
           </div>
         )}
