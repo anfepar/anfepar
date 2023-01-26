@@ -10,7 +10,6 @@
     "turbo": "next dev --turbo"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
     "date-fns": "^2.25.0",
     "elliptic": "^6.5.4",
     "gray-matter": "^4.0.3",

@@ -2,11 +2,10 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { GetStaticProps } from 'next'
 
-import Date from '../components/date/date'
-import Layout, { siteTitle } from '../components/layout/layout'
+import { Date } from '@/components/Date'
+import { Layout, siteTitle } from '@/components/Layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
-import { useContext } from 'react'
 import STRINGS from '@/constants/string'
 
 interface HomeProps {

@@ -1,6 +1,6 @@
-import Layout from '../../components/layout/layout'
+import Layout from '../../components/Layout/Layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
-import Date from '../../components/date/date'
+import Date from '../../components/Date/Date'
 import utilStyles from '../../styles/utils.module.css'
 
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'

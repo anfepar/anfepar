@@ -2,18 +2,19 @@ import styles from './layout.module.css'
 import utilStyles from '@/styles/utils.module.css'
 import Link from 'next/link'
 import Head from 'next/head'
-const name = 'Felipe Pardo'
-export const siteTitle = 'anfepar'
 import STRINGS from '@/constants/string'
-import { Header } from '../header/header'
+import { Header } from '@/components/Header'
 
-export default function Layout({
+export const siteTitle = 'anfepar'
+const name = 'Felipe Pardo'
+
+export const Layout = ({
   children,
   home,
 }: {
   children: React.ReactNode
   home?: boolean
-}) {
+}) => {
   return (
     <>
       <Head>

@@ -4,7 +4,7 @@ interface DateProps {
   dateString: string
 }
 
-export default function Date({ dateString }: DateProps) {
+export const Date = ({ dateString }: DateProps) => {
   const date = parseISO(dateString)
   return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
 }
