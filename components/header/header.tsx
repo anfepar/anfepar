@@ -7,15 +7,18 @@ import styles from './header.module.css';
 
 const menuItems = [
   { name: 'blog', text: 'blog', url: '/blog' },
+  { name: 'projects', text: 'projects', url: '/projects' },
   {
     name: 'github',
     url: 'https://github.com/anfepar',
     icon: '/images/github.png',
+    target: '_blank'
   },
   {
     name: 'linkedin',
     url: 'https://www.linkedin.com/in/anfepar',
     icon: '/images/linkedin.png',
+    target: '_blank'
   },
 ];
 
@@ -31,13 +34,11 @@ export const Header = () => {
           const { name, url, icon, text } = item;
 
           return (
-            <li key={name}>
-              <button className={styles.Header_Button}>
-                <a href={url} target="_blank" rel="noreferrer">
-                  {icon && <Image src={icon} width="35" height="35" alt={t('icon_alt', { name })} />}
-                  {text && <p className={styles.Header_Text}>{t(`url_${name}`)}</p>}
-                </a>
-              </button>
+            <li className={styles.Header_Item} key={name}>
+              <Link className={styles.Header_Link} href={url} target={item.target || '_self'} rel="noreferrer">
+                {icon && <Image src={icon} width={25} height={25} alt={t('icon_alt', { name })} />}
+                {text && <p className={styles.Header_Text}>{t(`url_${name}`)}</p>}
+              </Link>
             </li>
           );
         })}

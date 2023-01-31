@@ -18,6 +18,7 @@ const STRINGS: Texts = {
     logo_alt: 'Logo de anfepar',
     icon_alt: ({ name }) => `Logo de ${name}`,
     url_blog: 'Blog',
+    url_projects: 'Projects',
   },
 };
 
