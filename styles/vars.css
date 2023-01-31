@@ -1,0 +1,27 @@
+:root {
+  /* colors */
+  --main-color: #092141;
+  --contrast-color: #76B9E6;
+
+  /* fonts*/
+  --small-desktop: 1rem;
+  --medium-desktop: 2.25rem;
+  --large-desktop: 3rem;
+
+  --small-tablet: 1.5rem;
+  --medium-tablet: 2.25rem;
+  --large-tablet: 3rem;
+
+  --small-mobile: 1.5rem;
+  --medium-mobile: 2.25rem;
+  --large-mobile: 3rem;
+
+  /* spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --spacing-4: 1.25rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 2rem;
+
+}

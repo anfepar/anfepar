@@ -1,27 +1,39 @@
-.Header{
+.Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem;
+  padding: var(--spacing-4);
 }
 
-.Header_Logo{
+.Header_Link {
   cursor: pointer;
 }
 
-.Header_Menu{
+.Header_Link:hover {
+  opacity: 0.7;
+}
+
+.Header_Menu {
   display: flex;
   list-style-type: none;
   margin: 0;
   gap: 0.5rem
 }
 
-.Header_Button{
+.Header_Text {
+  color: var(--contrast-color);
+  font-size: var(--small-desktop);
+}
+
+.Header_Button {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  height: 100%;
+  width: 100%;
 }
 
-.Header_Button:hover{
+.Header_Button:hover {
   opacity: 0.7;
+  text-decoration: none;
 }

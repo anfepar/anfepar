@@ -1,18 +1,8 @@
 export interface Texts {
-  HOME: {
-    PROFILE_DESCRIPTION: string
+  [key: string]: {
+    [keyId: string]: string | ((props: any) => string),
   }
-  LAYOUT: {
-    ENG: string
-    SPA: string
-  }
-  POST: {
-    BACK_ARROW: string
-  }
-  HEADER: {
-    LOGO_ALT: string,
-  }
-}
+};
 
 const STRINGS: Texts = {
   LAYOUT: {
@@ -24,9 +14,11 @@ const STRINGS: Texts = {
       'Soy un Ingeniero de Software apasionado por el emprendimiento, me gusta resolver problemas usando la creatividad y la innovación, siempre estoy motivado por aprender cada día algo nuevo y compartir conocimiento en comunidades. Me considero un líder en formación, una persona curiosa con iniciativa y un gran bailarín',
   },
   POST: { BACK_ARROW: '← Volver al inico' },
-  HEADER: {
-    LOGO_ALT: 'Logo de anfepar',
+  Header: {
+    logo_alt: 'Logo de anfepar',
+    icon_alt: ({ name }) => `Logo de ${name}`,
+    url_blog: 'Blog',
   },
-}
+};
 
-export default STRINGS
+export default STRINGS;

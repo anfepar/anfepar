@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { Date } from '@/components/Date';
 import { siteTitle } from '@/components/Layout';
-import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../utils/posts';
 import STRINGS from '@/constants/string';
 
@@ -19,22 +18,22 @@ export default function Home({ allPostsData }: HomeProps) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <h1 className={utilStyles.heading2Xl}>{name}</h1>
-      <section className={utilStyles.headingMd}>
-        <p className={utilStyles.justifyText}>
+      <h1>{name}</h1>
+      <section>
+        <p>
           {STRINGS.HOME.PROFILE_DESCRIPTION}
         </p>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <section >
+        <h2>Blog</h2>
+        <ul>
           {postsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
                 {title}
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small>
                 <Date dateString={date} />
               </small>
             </li>
