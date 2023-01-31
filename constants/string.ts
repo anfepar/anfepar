@@ -20,6 +20,9 @@ const STRINGS: Texts = {
     url_blog: 'Blog',
     url_projects: 'Projects',
   },
+  Footer: {
+    about_me: 'Made by Felipe Pardo',
+  }
 };
 
 export default STRINGS;

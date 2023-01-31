@@ -1,6 +1,7 @@
 import styles from './layout.module.css';
 import Head from 'next/head';
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export const siteTitle = 'anfepar';
 
@@ -24,6 +25,7 @@ export const Layout = ({
       </Head>
       <Header />
       <main className={styles.container}>{children}</main>
+      <Footer />
     </>
   );
 };
