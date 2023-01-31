@@ -21,7 +21,7 @@ const STRINGS: Texts = {
     url_projects: 'Projects',
   },
   Footer: {
-    about_me: 'Made by Felipe Pardo',
+    about_me: 'Made by Felipe Pardo © 2023',
   }
 };
 

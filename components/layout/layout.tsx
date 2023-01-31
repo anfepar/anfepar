@@ -24,8 +24,12 @@ export const Layout = ({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
-      <main className={styles.container}>{children}</main>
-      <Footer />
+      <main className={styles.container}>
+        <>
+          {children}
+          <Footer />
+        </>
+      </main>
     </>
   );
 };
