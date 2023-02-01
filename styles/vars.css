@@ -2,6 +2,7 @@
   /* colors */
   --main-color: #092141;
   --contrast-color: #76B9E6;
+  --main-color-2: #0A2549;
 
   /* fonts*/
   --small-desktop: 1rem;
@@ -24,4 +25,8 @@
   --spacing-5: 1.5rem;
   --spacing-6: 2rem;
 
+  /* breakpoints */
+  --lg: 64rem;
+  --md: 48rem;
+  --sm: 20rem;
 }
