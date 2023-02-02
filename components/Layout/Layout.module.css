@@ -1,0 +1,13 @@
+.Layout_Container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 2rem auto 6rem;
+}
+
+/* responsive */
+
+@media screen and (max-width: 30rem) {
+  .Layout_Container {
+    margin: var(--spacing-3) auto 0;
+  }
+}

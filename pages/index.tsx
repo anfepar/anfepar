@@ -1,55 +1,64 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { GetStaticProps } from 'next'
-
-import Date from '../components/date/date'
-import Layout, { siteTitle } from '../components/layout/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import { useContext } from 'react'
-import STRINGS from '@/constants/string'
-
+import Head from "next/head";
+import Link from "next/link";
+import { GetStaticProps } from "next";
+import { Date } from "@/components/Date";
+import { siteTitle } from "@/components/Layout";
+import { getSortedPostsData } from "../utils/posts";
+import { Profile } from "@/components/Profile";
 interface HomeProps {
   allPostsData: any
 }
+const name = "Felipe Pardo";
 
 export default function Home({ allPostsData }: HomeProps) {
-  const postsData: { id: string; date: string; title: string }[] = allPostsData
+  const postsData: { id: string; date: string; title: string }[] = allPostsData;
   return (
-    <Layout home>
+    <>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p className={utilStyles.justifyText}>
-          {STRINGS.HOME.PROFILE_DESCRIPTION}
-        </p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <Profile name={name} />
+      <section >
+        <h2>Blog</h2>
+        <ul>
           {postsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li key={id}>
               <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
+                {title}
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small>
                 <Date dateString={date} />
               </small>
             </li>
           ))}
         </ul>
       </section>
-    </Layout>
-  )
+      <section >
+        <h2>Projects</h2>
+        <ul>
+          {postsData.map(({ id, date, title }) => (
+            <li key={id}>
+              <Link href="/posts/[id]" as={`/posts/${id}`}>
+                {title}
+              </Link>
+              <br />
+              <small>
+                <Date dateString={date} />
+              </small>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
-  }
-}
+  };
+};
