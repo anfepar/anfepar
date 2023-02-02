@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from '@/hooks/useTranslations';
@@ -36,9 +37,10 @@ export const Header = () => {
 
     menuItems.forEach((item) => {
       const { name, url, icon } = item;
+      const linkClasses = classNames(styles.Header_Link, { [styles.Header_Link__SocialMedia]: icon });
 
       const itemEntry = (
-        <Link className={`${styles.Header_Link} ${styles.Header_Link__SocialMedia}`} href={url} target={item.target || '_self'} rel="noreferrer">
+        <Link className={linkClasses} href={url} target={item.target || '_self'} rel="noreferrer">
           {icon && <Image src={icon} width={25} height={25} alt={t('icon_alt', { name })} />}
           {!icon && <p className={styles.Header_Text}>{t(`url_${name}`)}</p>}
         </Link>

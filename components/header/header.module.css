@@ -39,12 +39,13 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
-  margin-right: var(--spacing-4);
+  margin-right: var(--spacing-2);
   width: 100%;
 }
 
 .Header_Link__SocialMedia {
   width: max-content;
+  margin-right: var(--spacing-4);
 }
 
 .Header_Link:hover {
@@ -88,7 +89,7 @@
   }
 
   .Header_Mobile_List {
-    animation: fadeIn 1s;
+    animation: fadeIn 0.5s;
     display: flex;
     flex-direction: column;
     width: 100%;
