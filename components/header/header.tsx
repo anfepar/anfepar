@@ -1,5 +1,3 @@
-import { useCallback, useState } from "react";
-import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
