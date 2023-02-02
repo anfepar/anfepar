@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
 
 const menuItems = [
   {
