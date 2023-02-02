@@ -5,23 +5,18 @@ export interface Texts {
 };
 
 const STRINGS: Texts = {
-  LAYOUT: {
-    ENG: 'ING',
-    SPA: 'ESP',
-  },
-  HOME: {
-    PROFILE_DESCRIPTION:
-      'Soy un Ingeniero de Software apasionado por el emprendimiento, me gusta resolver problemas usando la creatividad y la innovación, siempre estoy motivado por aprender cada día algo nuevo y compartir conocimiento en comunidades. Me considero un líder en formación, una persona curiosa con iniciativa y un gran bailarín',
-  },
-  POST: { BACK_ARROW: '← Volver al inico' },
+  POST: { BACK_ARROW: "← Volver al inico" },
   Header: {
-    logo_alt: 'Logo de anfepar',
+    logo_alt: "Logo de anfepar",
     icon_alt: ({ name }) => `Logo de ${name}`,
-    url_blog: 'Blog',
-    url_projects: 'Projects',
+    url_blog: "Blog",
+    url_projects: "Projects",
   },
   Footer: {
-    about_me: 'Made by Felipe Pardo © 2023',
+    about_me: "Made by Felipe Pardo © 2023",
+  },
+  Profile: {
+    description: "Hi, I'm Felipe, I'm a frontend developer passionate about technology and how it could improve the people lives. I like to learn about users and how to solve their necessities with technology and a disruptive business model, I Constantly try to learn novel technologies, especially related with the web 3.0, I consider myself a great dancer 🕺"
   }
 };
 

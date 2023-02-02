@@ -1,26 +1,13 @@
-.container {
-    max-width: 60rem;
-    padding: 0 1rem;
-    margin: 3rem auto 6rem;
-  }
+.Layout_Container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 2rem auto 6rem;
+}
 
-  .info {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+/* responsive */
 
-  .profileImage {
-    width: 6rem;
-    height: 6rem;
+@media screen and (max-width: 30rem) {
+  .Layout_Container {
+    margin: var(--spacing-3) auto 0;
   }
-
-  .infoProfileImage {
-    width: 8rem;
-    height: 8rem;
-  }
-
-  .backToHome {
-    margin: 3rem 0 0;
-  }
+}

@@ -1,9 +1,9 @@
-import styles from './layout.module.css';
-import Head from 'next/head';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import Head from "next/head";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import styles from "./layout.module.css";
 
-export const siteTitle = 'anfepar';
+export const siteTitle = "anfepar";
 
 export const Layout = ({
   children,
@@ -24,10 +24,9 @@ export const Layout = ({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
-      <main className={styles.container}>
+      <main className={styles.Layout_Container}>
         <>
           {children}
-          <Footer />
         </>
       </main>
     </>
