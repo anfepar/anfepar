@@ -1,2 +1,2 @@
-export { Layout } from './Layout';
-export { siteTitle } from './Layout';
+export { Layout } from "./Layout";
+export { siteTitle } from "./Layout";

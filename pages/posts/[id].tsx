@@ -1,8 +1,8 @@
 
-import { GetStaticProps, GetStaticPaths } from 'next';
-import Head from 'next/head';
-import { getAllPostIds, getPostData } from '@/utils/posts';
-import { Date } from '@/components/Date';
+import { GetStaticProps, GetStaticPaths } from "next";
+import Head from "next/head";
+import { getAllPostIds, getPostData } from "@/utils/posts";
+import { Date } from "@/components/Date";
 
 
 
