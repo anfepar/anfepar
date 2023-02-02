@@ -10,7 +10,6 @@
     "turbo": "next dev --turbo"
   },
   "dependencies": {
-    "classnames": "^2.3.2",
     "date-fns": "^2.25.0",
     "elliptic": "^6.5.4",
     "gray-matter": "^4.0.3",
