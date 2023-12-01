@@ -5,16 +5,12 @@
 
 I’m a frontend developer 💚
 ### My projects 🤓
-### Blockchain ⛓️
-- BSIEM https://github.com/anfepar/BSIEM 
-- Basic Message Exchange with Ethereum https://github.com/anfepar/MessageExchange
-### Education 📖
 - Starwars Planets Searcher https://github.com/anfepar/starwars-planets-search
-- Anfepar my personal blog https://github.com/anfepar/anfepar 
-- Mercado libre products searcher https://github.com/anfepar/MercadoLibreFrontTest
-- PlatziGram https://github.com/anfepar/PlatziGram
-- Django api rest https://github.com/anfepar/django-api-rest
+- Anfepar my personal blog https://github.com/anfepar/anfepar
+- BSIEM https://github.com/anfepar/BSIEM
+- CRYPTO WEB https://github.com/anfepar/crypto-web
+### Platzi 💚
 - My Platzi profile https://platzi.com/p/anfepar/
-### My Courses as teacher 💚
+### My Courses as teacher 
 I have a course at [Platzi](https://platzi.com/cursos/smart-contracts/) about smart contracts
 - Course repository https://github.com/anfepar/SmartContractsPlatzi
