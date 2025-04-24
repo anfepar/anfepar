@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/michelle-felipe",
+        source: "/:path*",
         destination: "https://wedding-template-v1.vercel.app/",
         permanent: true,
       },
